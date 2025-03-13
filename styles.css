@@ -1,0 +1,201 @@
+/* Общие стили */
+:root {
+    --primary-color: #6d28d9; /* Фиолетовый */
+    --secondary-color: #1e293b; /* Темно-синий */
+    --background-color: #f8fafc; /* Светло-серый */
+    --text-color: #1e293b; /* Темно-синий */
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Шапка */
+header {
+    background-image: url('img/one.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Затемнение фона для лучшей читаемости текста */
+    z-index: 1;
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.photo img {
+    width: 340px;
+    height: 340px;
+    border-radius: 50%; /* Круглое фото */
+    border: 3px solid white; /* Белая рамка */
+    object-fit: cover; /* Чтобы фото не искажалось */
+}
+
+.header-text {
+    text-align: left;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+header .contact-info {
+    font-size: 1rem;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* Секции */
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Навыки */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Опыт работы */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.experience-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.experience-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.experience-card .date {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.experience-card ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.experience-card li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* Контакты */
+.contact-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact-links li {
+    margin: 10px 0;
+}
+
+.contact-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* Подвал */
+footer {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
